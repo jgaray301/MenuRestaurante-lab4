@@ -1,11 +1,11 @@
-package com.controller;
+package com.trips.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.repository.ComidaRepository;
+import com.trips.repository.ComidaRepository;
 
 @Controller
 public class HomeController {
@@ -15,9 +15,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model){
-
         model.addAttribute("comidas", repo.findAll());
-
         return "index";
     }
 }

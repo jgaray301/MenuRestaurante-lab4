@@ -1,12 +1,12 @@
-package com.controller;
+package com.trips.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.model.Categoria;
-import com.repository.CategoriaRepository;
+import com.trips.model.Categoria;
+import com.trips.repository.CategoriaRepository;
 
 @Controller
 @RequestMapping("/categorias")

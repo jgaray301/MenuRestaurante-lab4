@@ -1,13 +1,13 @@
-package com.controller;
+package com.trips.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.model.Comida;
-import com.repository.CategoriaRepository;
-import com.repository.ComidaRepository;
+import com.trips.model.Comida;
+import com.trips.repository.CategoriaRepository;
+import com.trips.repository.ComidaRepository;
 
 @Controller
 @RequestMapping("/comidas")
@@ -28,8 +28,7 @@ public class ComidaController {
     @GetMapping("/nuevo")
     public String nuevo(Model model){
         model.addAttribute("comida", new Comida());
-        model.addAttribute("categorias",
-                categoriaRepo.findAll());
+        model.addAttribute("categorias", categoriaRepo.findAll());
         return "comidas/form";
     }
 
